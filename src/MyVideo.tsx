@@ -1,7 +1,9 @@
 import {
   AbsoluteFill,
+  Audio,
   interpolate,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -33,6 +35,8 @@ export const MyVideo: React.FC<Props> = ({ title, subtitle }) => {
         padding: 80,
       }}
     >
+      {/* 나레이션 목소리 (public/narration.mp3) */}
+      <Audio src={staticFile("narration.mp3")} />
       <div
         style={{
           fontSize: 140,
